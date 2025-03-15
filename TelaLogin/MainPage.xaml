@@ -31,9 +31,13 @@
                             <TapGestureRecognizer 
                                 Tapped="tapSenha_Tapped"/>
                         </Label.GestureRecognizers>
-                    </Label>
+                    </Label>                
 
                 </StackLayout>
+                <Button x:Name="btnEntrar"
+                        Text="Entrar"
+                        BackgroundColor="Blue"
+                        Clicked="btnEntrar_Clicked"/>
             </StackLayout>
         </Frame>
     </StackLayout>
