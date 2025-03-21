@@ -35,6 +35,14 @@
                 /*DisplayAlert("Informação!",
                              "Acesso permitido",
                              "OK");*/
+                //Vamos armazenar o usuario logado
+                //na classe singleton
+
+                //Criando variavel para acessar
+                //a classe singleton
+                var usuarioLogado = UsuarioLogado.Instancia;
+                usuarioLogado.Login = txtUsuario.Text;
+
                 //Chamar a tela Principal
                 Application.Current.MainPage.
                     Navigation.PushAsync(
@@ -44,6 +52,11 @@
                 DisplayAlert("Atenção!",
                     "Usuário ou Senha inválido",
                     "OK");
+        }
+
+        private void lblRegistrar_Tapped(object sender, TappedEventArgs e)
+        {
+
         }
     }
 }

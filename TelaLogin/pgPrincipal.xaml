@@ -7,5 +7,7 @@
         <Button Text="Voltar"
                 x:Name="btnVoltar"
                 Clicked="btnVoltar_Clicked"/>
+
+        <Label x:Name="txtUsuarioLogado"/>
     </StackLayout>
 </ContentPage>

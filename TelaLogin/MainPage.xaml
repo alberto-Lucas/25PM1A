@@ -38,6 +38,21 @@
                         Text="Entrar"
                         BackgroundColor="Blue"
                         Clicked="btnEntrar_Clicked"/>
+
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Não possui conta? "/>
+                            <Span Text="Registre-se"
+                                  FontAttributes="Bold"
+                                  TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Tapped="lblRegistrar_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
         </Frame>
     </StackLayout>
