@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TelaLogin.pgRegistro"
+             Title="pgRegistro">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Frame BackgroundColor="Black"
+                   CornerRadius="10">
+                <StackLayout>
+                    <Label Text="Registre-se"
+                           FontSize="30"/>
+
+                    <Label Text="Nome"
+                           Margin="0,20,0,0"/>
+                    <Entry x:Name="txtNome"/>
+
+                    <Label Text="Login"
+                           Margin="0,20,0,0"/>
+                    <Entry x:Name="txtLogin"/>
+
+                    <Label Text="Senha"
+                           Margin="0,20,0,0"/>
+                    <Entry x:Name="txtSenha"/>
+
+                    <Label Text="Email"
+                           Margin="0,20,0,0"/>
+                    <Entry x:Name="txtEmail"/>
+
+                    <Label Text="Idade"
+                           Margin="0,20,0,0"/>
+                    <Entry x:Name="txtIdade"/>
+
+                    <Image Source="img_imagem.png"
+                           HeightRequest="50"                           
+                           x:Name="imgAvatar"/>
+                    <Button Text="Adicionar imagem"
+                            x:Name="btnAddImagem"
+                            Clicked="btnAddImagem_Clicked"/>
+
+                    <Button x:Name="btnSalvar"
+                            Text="Salvar"
+                            Margin="0,20,0,0"
+                            Clicked="btnSalvar_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

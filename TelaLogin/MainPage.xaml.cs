@@ -28,20 +28,16 @@
 
         private void btnEntrar_Clicked(object sender, EventArgs e)
         {
+            var usuarioLogado = UsuarioLogado.Instancia;
             //Validar usuario e senha
-            if (txtUsuario.Text == "admin"
-                && txtSenha.Text == "admin")
+            if (txtUsuario.Text == usuarioLogado.Login
+                && txtSenha.Text == usuarioLogado.Senha)
             {
                 /*DisplayAlert("Informação!",
                              "Acesso permitido",
                              "OK");*/
                 //Vamos armazenar o usuario logado
                 //na classe singleton
-
-                //Criando variavel para acessar
-                //a classe singleton
-                var usuarioLogado = UsuarioLogado.Instancia;
-                usuarioLogado.Login = txtUsuario.Text;
 
                 //Chamar a tela Principal
                 Application.Current.MainPage.
@@ -56,7 +52,8 @@
 
         private void lblRegistrar_Tapped(object sender, TappedEventArgs e)
         {
-
+            Application.Current.MainPage.
+                Navigation.PushAsync(new pgRegistro());
         }
     }
 }

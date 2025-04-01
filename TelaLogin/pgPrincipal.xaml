@@ -8,6 +8,16 @@
                 x:Name="btnVoltar"
                 Clicked="btnVoltar_Clicked"/>
 
-        <Label x:Name="txtUsuarioLogado"/>
+        <Frame BackgroundColor="Black"
+               CornerRadius="10">
+            <StackLayout>
+                <Label x:Name="txtNome"/>
+                <Label x:Name="txtLogin"/>
+                <Label x:Name="txtSenha"/>
+                <Label x:Name="txtEmail"/>
+                <Label x:Name="txtIdade"/>
+                <Image x:Name="imgPerfil"/>
+            </StackLayout>
+        </Frame>
     </StackLayout>
 </ContentPage>

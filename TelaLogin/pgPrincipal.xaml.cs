@@ -9,7 +9,14 @@ public partial class pgPrincipal : ContentPage
 		//Vamos recuperar o usuario
 		//q esta na singleton
 		var usuarioLogado = UsuarioLogado.Instancia;
-        txtUsuarioLogado.Text = usuarioLogado.Login;
+
+		txtNome.Text  = "Nome: "  + usuarioLogado.Nome;
+		txtLogin.Text = "Login: " + usuarioLogado.Login;
+		txtSenha.Text = "Senha: " + usuarioLogado.Senha;
+		txtEmail.Text = "Email: " + usuarioLogado.Email;
+		txtIdade.Text = "Idade: " + usuarioLogado.Idade;
+		imgPerfil.Source = 
+			usuarioLogado.DiretorioImagem;
 
 
     }
