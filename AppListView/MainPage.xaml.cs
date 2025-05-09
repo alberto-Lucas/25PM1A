@@ -4,6 +4,37 @@ namespace AppListView
 {
     public partial class MainPage : ContentPage
     {
+        //Passo passo para MVC
+        //-----------------------------------
+        //Primeiro passo
+        //Instalar as bibliotecas do SQLite
+        //e gerenciamento de arquivo 
+        //Instalação pacote NuGet
+        //sqlite-net-pcl (icone da pena)
+        //pclext.filestorage (icone do susshi)
+        //-----------------------------------
+        //Segundo passo
+        //Criar a pasta Models
+        //Iremos criar a classe Pessoa
+        //para o nosso objeto Pessoa
+        //-----------------------------------
+        //Terceiro passo
+        //Criar a pasta Services
+        //Onde iremos aramazenar a conexão
+        //com o banco de dados
+        //Iremos criar a classe DatabaseService
+        //Quarto passo
+        //Criar a pasta Controllers
+        //Onde iremos armazenar a manipulação 
+        //dos dados no BD
+        //Insert, Update, Delete e Select
+        //Como precisamos criar com base no objeto
+        //criaremos a classe PessoaController
+
+
+
+
+
         //Criar uma classe Pessoa
         //que sera o nosso objeto Pessoa
         public class Pessoa
