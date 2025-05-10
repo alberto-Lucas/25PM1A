@@ -30,7 +30,14 @@ namespace AppListView
         //Insert, Update, Delete e Select
         //Como precisamos criar com base no objeto
         //criaremos a classe PessoaController
-
+        //-----------------------------------
+        //Quinto passo
+        //Criar a pasta Views
+        //Onde iremos armazenar as telas
+        //que serão exibidas ao usuario
+        //Portanto iremos criar uma de cadastro
+        //e manteremos a ListView na MainPage
+        //-----------------------------------
 
 
 

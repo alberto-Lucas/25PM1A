@@ -48,5 +48,62 @@ namespace AppListView.Controllers
             //Se retornar 0, o registro não foi inserido
             return connection.Insert(value) > 0;
         }
+
+        public bool Update(Pessoa value)
+        {
+            //seguir a mesma ideia do Insert
+            return connection.Update(value) > 0;
+        }
+
+        public bool Delete(Pessoa value)
+        {
+            return connection.Delete(value) > 0;
+        }
+
+        //Rotina de consulta
+
+        //Consultar para retornoar todos os dados
+        public List<Pessoa> GetAll()
+        {
+            //Retornar todos registro da tabela
+            //em um lista do tipo Pessoa
+            //Semelhante ao comando
+            //SELECT * FROM Pessoa
+            return
+                connection.Table<Pessoa>().ToList();
+        }
+
+        //Consultar por ID
+        public Pessoa GetById(int value)
+        {
+            //Utilizar o recurso Find
+            //Vai consultar todos
+            //os registro e identificar
+            //o id pela chave primaria
+            //Ou seja olha apenas para a
+            //chave primaria
+            return 
+                connection.Find<Pessoa>(value);
+        }
+
+        //Consulta filtrando pelo Nome
+        public List<Pessoa> GetByNome(string value)
+        {
+            //Retornar uma lista de registros
+            //de acordoc om o filtro aplicado
+            //Onde ira validar se o registro
+            //contem o valor desejado
+            //semelhante ao comando Like
+
+            //o seja é o dataTable
+            //=> é o lambida
+            //imputa um dado implicitamente
+            return
+                connection.Table<Pessoa>().
+                Where(x => x.Nome.Contains(value)).
+                ToList();
+        }
+
+
     }
 }
