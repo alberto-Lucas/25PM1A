@@ -22,5 +22,8 @@ namespace AppListView.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Idade { get; set; }
+        //Adicioanr a propriedade para salvar
+        //o diretorio da imagem
+        public string DirImagem { get; set; }
     }
 }

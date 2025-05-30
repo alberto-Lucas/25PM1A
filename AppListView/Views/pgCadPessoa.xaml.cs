@@ -76,4 +76,14 @@ public partial class pgCadPessoa : ContentPage
                 "OK");
         }
     }
+
+    private void btnSelecionar_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void btnRemover_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
