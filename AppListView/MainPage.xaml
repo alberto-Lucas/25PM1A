@@ -25,7 +25,15 @@
                                BackgroundColor="#414142"
                                Margin="5">
                             <StackLayout Orientation="Horizontal">
-                                <StackLayout HorizontalOptions="StartAndExpand">
+                                <StackLayout HorizontalOptions="Fill" 
+                                             Padding="10">
+                                    <Image Source="{Binding DirImagem}"
+                                           HeightRequest="50"
+                                           WidthRequest="50"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </StackLayout>                                
+                                <StackLayout HorizontalOptions="FillAndExpand">
                                     <Label Text="{Binding Nome}"
                                            FontSize="20"
                                            FontAttributes="Bold"/>

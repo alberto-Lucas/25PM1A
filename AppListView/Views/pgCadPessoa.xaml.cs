@@ -1,5 +1,6 @@
 using AppListView.Models;
 using AppListView.Controllers;
+using AppListView.Services;
 
 namespace AppListView.Views;
 
@@ -56,6 +57,12 @@ public partial class pgCadPessoa : ContentPage
         pessoa.Nome = nome;
         pessoa.Idade = idade;
 
+        //Chamara a rotina para copiar a imagem
+        //e iremos gravar no banco
+        //o diretorio da nova imagem(copia)
+        pessoa.DirImagem =
+            ImageService.CopiarImagem(sImagemSelecionada);
+
         //Realizar a inserção no banco de dados
         if(pessoaController.Insert(pessoa))
         {
@@ -66,6 +73,7 @@ public partial class pgCadPessoa : ContentPage
                 "OK");
             txtNome.Text = "";
             txtIdade.Text = "";
+            LimparImagem();
         }
         else
         {
@@ -77,13 +85,39 @@ public partial class pgCadPessoa : ContentPage
         }
     }
 
-    private void btnSelecionar_Clicked(object sender, EventArgs e)
+    //Criar uma variavel para armazenar
+    //o diretorio da imagem selecionada
+    //nescessario para tramitir a informação
+    //entre os botões
+    string sImagemSelecionada;
+    private async void btnSelecionar_Clicked(object sender, EventArgs e)
     {
+        //Importar a camada de serviço
+        //using AppListView.Services;
+
+        //Devido a tela de selação
+        //precisamos deixar o botão async
+
+        //Iremos chamar a rotina de seleção
+        sImagemSelecionada =
+            await ImageService.SelecionarImagem();
+        //Apresentar a imagem ao usuario
+        imgSelecionada.Source = sImagemSelecionada;
+        //Exibir o botão remover
+        btnRemover.IsVisible = true;
 
     }
 
+    //Método para limpar imagem da tela
+    private void LimparImagem()
+    {
+        //Remover a imagem da tela
+        imgSelecionada.Source = "";
+        //Ocultar o botão Remover
+        btnRemover.IsVisible = false;
+    }
     private void btnRemover_Clicked(object sender, EventArgs e)
     {
-
+        LimparImagem();
     }
 }
