@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AppMenuShell.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AppMenuShell"
+    Shell.FlyoutBehavior="Flyout"
+    Title="AppMenuShell"
+    Shell.NavBarIsVisible="False"
+    Shell.TabBarIsVisible="False"
+    xmlns:Views="clr-namespace:AppMenuShell.Views">
+
+    <Shell.FlyoutHeader>
+        <StackLayout Background="DarkOrange">
+            <Image Source="dotnet_bot.png"
+                   HeightRequest="200"/>
+            <Label Text="lucas@gmail.com"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem 
+        FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent Title="Pagina Inicial"
+                      Icon="img.png"
+                      ContentTemplate=
+                      "{DataTemplate Views:pgInicial}"/>
+        
+        <ShellContent Title="Cadastro Cliente"
+                      Icon="img.png"
+                      ContentTemplate=
+                      "{DataTemplate Views:pgCadastro}"/>
+    </FlyoutItem>
+    
+    <Shell.FlyoutFooter>
+        <Label Text="v1.0.0.0"/>
+    </Shell.FlyoutFooter>
+   
+</Shell>
